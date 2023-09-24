@@ -21,7 +21,7 @@ public class testDriver {
 		ArrayList<String> readLines = new ArrayList();
 
 		try { //Read File & Scan
-		 	File myObj = new File("src/data.txt");
+		 	File myObj = new File("src/test.txt");
 			Scanner myReader = new Scanner(myObj);
 			
 			while (myReader.hasNextLine()) {
@@ -59,7 +59,7 @@ public class testDriver {
 		        } 
             else 
             {
-		        	System.out.print("GroceryProduct: "+productName+" does not exist; invalid token");
+		        	System.out.println("GroceryProduct: "+productName+" does not exist; invalid token");
 		        }
 	      }
 		
