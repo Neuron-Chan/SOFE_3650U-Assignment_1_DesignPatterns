@@ -29,13 +29,15 @@ public class testDriver {
 				readLines.add(data);
 			}
 
+			myReader.close();
+
 		} catch (FileNotFoundException e) {
 		      System.out.println("An error occurred.");
 		      e.printStackTrace();
 		    }
 		      
 		      
-		      myReader.close();
+		      
 		   
 		 
 		    //Products with Factories:
