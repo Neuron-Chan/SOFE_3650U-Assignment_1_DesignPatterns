@@ -2,7 +2,7 @@ package abstractFactory;
 
 public class Apples implements GroceryProduct {
 	
-	//Instance Variables
+	//Instance Variable
 	private double price;
 	
 	//Price Setters & Getters
