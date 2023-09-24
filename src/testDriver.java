@@ -19,15 +19,20 @@ public class testDriver {
 		GroceryProductFactory banana = new BananasFactory();
 		
 		ArrayList<String> readLines = new ArrayList();
-		      
-			 //Read File & Scan
-			 File myObj = new File("src/data.txt");
-		     Scanner myReader = new Scanner(myObj);
-		      
-		      while (myReader.hasNextLine()) {
-		        String data = myReader.nextLine();
-		        readLines.add(data);
-		      }
+
+		try { //Read File & Scan
+		 	File myObj = new File("src/data.txt");
+			Scanner myReader = new Scanner(myObj);
+			
+			while (myReader.hasNextLine()) {
+				String data = myReader.nextLine();
+				readLines.add(data);
+			}
+
+		} catch (FileNotFoundException e) {
+		      System.out.println("An error occurred.");
+		      e.printStackTrace();
+		    }
 		      
 		      
 		      myReader.close();
