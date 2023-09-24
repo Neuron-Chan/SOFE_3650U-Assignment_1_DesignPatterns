@@ -1,4 +1,4 @@
-package abstractfactory;
+package abstractFactory;
 
 public class Bananas implements GroceryProduct {
 	
