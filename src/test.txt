@@ -1,0 +1,4 @@
+Bananas 4.50
+Apples 3.50
+Grapes 2.25
+Oranges 4.75
