@@ -21,7 +21,7 @@ public class ApplesFactory implements GroceryProductFactory {
 		
 		try{
 			
-			File file = new File("././datafile");
+			File file = new File("datafile.txt");
 			Scanner reader = new Scanner(file);
 			
 			while (true){
