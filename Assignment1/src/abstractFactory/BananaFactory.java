@@ -1,8 +1,8 @@
+package abstractFactory;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-
-package abstractFactory;
 
 public class BananaFactory implements GroceryProductFactory {
 
