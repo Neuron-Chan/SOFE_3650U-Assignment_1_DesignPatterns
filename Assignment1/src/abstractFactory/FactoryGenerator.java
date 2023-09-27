@@ -1,6 +1,23 @@
 public class FactoryGenerator {
-  AbstractFactory newFactory;
-  public AbstractFactory getFactory(){
-    newFactory = new AbstractFactory();
-}
+ 
+  GroceryProductFactory factory;
+	
+	public GroceryProductFactory getFactory(String product) {
+		if(product == "Apple") {
+			
+			factory = new AppleFactory();
+			factory.getProduct();
+			
+			return factory;
+			
+		}else if(product == "Banana") {
+			
+			factory = new BananaFactory();
+			factory.getProduct();
+			
+			return factory;
+		}
+		
+		return factory;
+	}
 }
