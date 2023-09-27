@@ -4,7 +4,8 @@ public class FactoryTest{
   
     System.out.println("Hello User, today we will make grocery items");
     FactoryGenerator a = new FactoryGenerator();
-    a.getFactory();
+    
+    
   
   }
 
