@@ -2,14 +2,47 @@ package abstractFactory;
 
 public class ApplesFactory implements GroceryProductFactory {
 
-	@Override
-	public GroceryProduct createProduct(double productPrice) {
+	GroceryProduct a = new Apple();
+	
+	public GroceryProduct getProduct() {
 		
-		GroceryProduct a = new Apples();
-		a.setPrice(productPrice);
-		System.out.println("An Apple has been created.");
+		a.setPrice(getPrice("Apple"));
 		
 		return a;
+	}
+
+	public double getPrice(String product){
+		
+		double value = 0;
+		
+		try{
+			
+			File file = new File("././datafile");
+			Scanner reader = new Scanner(file);
+			
+			while (true){
+				
+				String price = reader.nextLine();
+				
+				if(price.contains(product) ){
+					int index = price.indexOf(' ');
+					String temp = price.substring(index);
+					value = Double.parseDouble(temp);
+					reader.close();
+					System.out.println("An Apple has been created.");
+					break;	
+				}
+			}
+		} catch (FileNotFoundException e){
+			System.out.println("An Apple has not been created.");
+			System.out.println("Data File not found");
+		}
+		return value;
+	}
+	
+	public String getProductPrice() {
+		String out = a.getPrice()+"";
+		return out;
 	}
 	
 }
