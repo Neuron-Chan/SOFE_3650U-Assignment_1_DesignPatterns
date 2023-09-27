@@ -1,6 +1,6 @@
 public class FactoryGenerator {
-  AbstractFactory new;
+  AbstractFactory newFactory;
   public AbstractFactory getFactory(){
-    
+    newFactory = new AbstractFactory();
 }
 }
