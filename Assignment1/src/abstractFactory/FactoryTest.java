@@ -1,4 +1,4 @@
-public class actoryTest{
+public class FactoryTest{
   
   public static void main (stirng[] args){
   
