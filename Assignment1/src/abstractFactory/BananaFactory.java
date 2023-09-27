@@ -20,7 +20,7 @@ GroceryProduct a = new Banana();
 		double value = 0;
 		
 		try{
-			File file = new File("././datafile");
+			File file = new File("datafile.txt");
 			Scanner reader = new Scanner(file);
 			
 			
