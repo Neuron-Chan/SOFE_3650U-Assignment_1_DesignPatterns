@@ -6,37 +6,46 @@ package abstractFactory;
 
 public class BananaFactory implements GroceryProductFactory {
 
-	String productType = "Banana";
+GroceryProduct a = new Banana();
 	
-	@Override
 	public GroceryProduct getProduct() {
-		
-		GroceryProduct a = new Banana();
-		a.setPrice(product);
-		System.out.println("An Banana has been created.");
+	
+		a.setPrice(getPrice("Banana"));
 		
 		return a;
 	}
 
 	public double getPrice(String product){
-		double value;
+		
+		double value = 0;
+		
 		try{
-			File file = new File("datafile.txt");
+			File file = new File("././datafile");
 			Scanner reader = new Scanner(file);
 			
+			
 			while (true){
+				
 				String price = reader.nextLine();
+				
 				if(price.contains(product) ){
 					int index = price.indexOf(' ');
-					index--;
 					String temp = price.substring(index);
 					value = Double.parseDouble(temp);
 					reader.close();
+					System.out.println("An Banana has been created.");
 					break;	
 				}
 			}
 		} catch (FileNotFoundException e){
+			System.out.println("An Banana has not been created.");
 			System.out.println("Data File not found");
 		}
+		return value;
+	}
+	
+	public String getProductPrice() {
+		String out = a.getPrice()+"";
+		return out;
 	}
 }
