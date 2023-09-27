@@ -6,11 +6,13 @@ package abstractFactory;
 
 public class BananaFactory implements GroceryProductFactory {
 
+	String productType = "Banana";
+	
 	@Override
 	public GroceryProduct getProduct() {
 		
 		GroceryProduct a = new Banana();
-		a.setPrice(productPrice);
+		a.setPrice(product);
 		System.out.println("An Banana has been created.");
 		
 		return a;
@@ -21,18 +23,20 @@ public class BananaFactory implements GroceryProductFactory {
 		try{
 			File file = new File("datafile.txt");
 			Scanner reader = new Scanner(file);
+			
 			while (true){
 				String price = reader.nextLine();
 				if(price.contains(product) ){
 					int index = price.indexOf(' ');
 					index--;
-					
-				}else if (!reader.hasNextLine()){
-					
+					String temp = price.substring(index);
+					value = Double.parseDouble(temp);
+					reader.close();
+					break;	
 				}
 			}
-		} catch{
-
+		} catch (FileNotFoundException e){
+			System.out.println("Data File not found");
 		}
 	}
 }
