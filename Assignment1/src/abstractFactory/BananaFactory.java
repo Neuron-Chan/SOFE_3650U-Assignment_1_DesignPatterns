@@ -1,6 +1,6 @@
 package abstractFactory;
 
-public class BananaFactory implements GroceryProductFactory {
+public class BananaFactory extends AbstractFactory implements GroceryProductFactory {
 
 	@Override
 	public GroceryProduct createProduct(double productPrice) {
