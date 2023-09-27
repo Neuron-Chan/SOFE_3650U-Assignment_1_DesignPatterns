@@ -1,5 +1,9 @@
 package abstractFactory;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class ApplesFactory implements GroceryProductFactory {
 
 	GroceryProduct a = new Apple();
