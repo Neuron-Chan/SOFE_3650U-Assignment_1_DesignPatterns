@@ -5,7 +5,7 @@
  
  Student Number 2: **100754066**
 
- Student Number 2: **100828103**
+ Student Number 3: **100828103**
 
 ### UML Diagram of Abstract Factory
 
