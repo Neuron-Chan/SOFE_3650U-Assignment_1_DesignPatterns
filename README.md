@@ -10,3 +10,7 @@
 ### UML Diagram of Abstract Factory
 
 ![UML_Diagram](./UML_Diagram.png)
+
+### FactoryTest.java Output
+
+![Output](./Output.png)
